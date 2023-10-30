@@ -29,9 +29,13 @@ number = 5
 puts number * 10
 
 
+# Write a program that uses variables to store two words, then prints both words on the same line in all capital letters.
+
+word1 = "hello"
+word2 = "world"
+puts word1.upcase + word2.upcase
+
 # Write a program that uses a variable to store a word, then prints the word with all lowercase letters.
 
 var = "KitChen"
 puts var.downcase
-
-
