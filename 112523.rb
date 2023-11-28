@@ -19,13 +19,13 @@ people = {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}}
 
 people_arr = []
 people.each do |id, person|
-	person[:id] = id
+  person[:id] = id
 	people_arr << person
 end
 p people_arr
 
 people_arr = people.map do |id, person| 
-	person[:id] = id
+  person[:id] = id
 	person
 end
 p people_arr
