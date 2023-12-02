@@ -54,8 +54,8 @@ puts "This laptop was released in #{laptop.metadata[:year]}."
 # Write a Playlist class that stores a name and an array of songs with methods to add a song, remove a song, shuffle the songs into a random order, and display all the songs.
 
 class Playlist
-  attr_reader :name, :songs
-  attr_writer :name, :songs
+  attr_reader :name
+  attr_writer :name
 
   def initialize(name)
     @name = name
@@ -63,11 +63,21 @@ class Playlist
   end
 
   def add_song(song)
-    songs << song
+    @songs << song
   end
 
   def remove_song(song)
-    songs.delete(song)
+    @songs.delete(song)
+  end
+
+  def shuffle(songs)
+    @songs.shuffle
+  end
+
+  def display_playlist
+    puts "#{name}"
+    puts "Songs in the playlist:"
+    @songs.each { |song| "- #{song}" }
   end
 end
 
@@ -75,6 +85,10 @@ playlist = Playlist.new("Study Playlist")
 p playlist.add_song("Cornfield Chase")
 p playlist.add_song("Mountains")
 p playlist.add_song("Now We Are Free")
+p playlist.display_playlist
+p playlist.remove_song("Mountains")
+p playlist.display_playlist
+
 
 # Write a Contact class that stores the name, age, and contact_info, where contact_info is a hash that stores any additional information about the contact.
 
