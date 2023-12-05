@@ -70,7 +70,7 @@ class Playlist
     @songs.delete(song)
   end
 
-  def shuffle(songs)
+  def shuffle
     @songs.shuffle
   end
 
