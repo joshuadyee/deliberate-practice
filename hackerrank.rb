@@ -95,3 +95,44 @@ def time_conversion(s)
 end
 
 time_conversion("07:05:45PM")
+
+##################################################
+
+# Grading Students (2/23/24)
+
+grade = (0...100) #grades allowed
+
+# if grade < 40
+#   grade = "failing"
+# end
+
+grade = 84
+# p grade % 5
+
+# grades = [71, 72, 83, 98, 35]
+
+def grading_students(grades)
+  rounded_grades = []
+
+  grades.each do |grade|
+    if grade >= 38
+      if grade % 5 == 3
+        grade += 2
+      elsif grade % 5 == 4
+        grade += 1
+      end
+    else 
+      grade
+    end
+    rounded_grades << grade
+  end
+  return rounded_grades
+end
+
+p grading_students([71, 72, 83, 98, 35])
+
+##################################################
+
+
+# Apple and Orange
+
