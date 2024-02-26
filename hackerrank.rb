@@ -131,8 +131,44 @@ end
 
 p grading_students([71, 72, 83, 98, 35])
 
+# try again using ceil methods  
+
 ##################################################
 
 
 # Apple and Orange
 
+# inclusive range => [s, t]
+# a => apple origin
+# b => orange origin
+# apples => array of d value for apples
+# oranges => array of d value for oranges
+
+# trying to find n of apples and oranges that are withing inclusive range
+# given apples/oranges, we have to map through the array and add "a"/"b" to each value to find the d values
+# return d values as integers printed on different lines (p #{a} #{b})
+
+
+def count_apples_and_oranges(s, t, a, b , apples, oranges)
+  apples_relative_dist = apples.map { |apple| apple + a }
+  oranges_relative_dist = oranges.map { |orange| orange + b }
+
+  apple_count = 0
+  orange_count = 0
+  
+  apples_relative_dist.each do |apple|
+    if apple >= s and apple <= t
+      apple_count += 1
+    end
+  end
+
+  oranges_relative_dist.each do |orange|
+    if orange >= s and orange <= t
+      orange_count += 1
+    end
+  end
+
+  puts apple_count, orange_count
+end
+
+count_apples_and_oranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4])
