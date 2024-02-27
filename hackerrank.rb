@@ -48,7 +48,7 @@ def mini_max_sum(arr)
   puts "#{smaller_sum} #{bigger_sum}"
 end
 
-mini_max_sum([1,2,3,4,5])
+# mini_max_sum([1,2,3,4,5])
 
 #correct solution unless all numbers are the same (2/23/24)
 
@@ -94,7 +94,7 @@ def time_conversion(s)
   puts "#{hour}:#{minutes}:#{seconds}"
 end
 
-time_conversion("07:05:45PM")
+# time_conversion("07:05:45PM")
 
 ##################################################
 
@@ -129,7 +129,7 @@ def grading_students(grades)
   return rounded_grades
 end
 
-p grading_students([71, 72, 83, 98, 35])
+# p grading_students([71, 72, 83, 98, 35])
 
 # try again using ceil methods  
 
@@ -155,7 +155,7 @@ def count_apples_and_oranges(s, t, a, b , apples, oranges)
 
   apple_count = 0
   orange_count = 0
-  
+
   apples_relative_dist.each do |apple|
     if apple >= s and apple <= t
       apple_count += 1
@@ -171,4 +171,34 @@ def count_apples_and_oranges(s, t, a, b , apples, oranges)
   puts apple_count, orange_count
 end
 
-count_apples_and_oranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4])
+# count_apples_and_oranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4])
+
+##################################################
+
+
+# Number Line Jumps
+
+# x1 = 1st kangaroo starting point
+# v1 = rate of mvmt in meters/jump (jump distance)
+# x2 = 2nd kangaroo starting point
+# v2 = 2nd roo's jump rate
+  
+# x1 is being incremented by the value of v1, vice versa for x2/v2
+
+# if at any point after starting the x of k1 == x of k2, we print YES
+# otherwise we print NO
+
+# if both x1 and v1 are less than x2/v2, return NO (1st roo will never catch up)
+# MEDIUM method
+if x1 < x2 && v1 < v2
+  return "NO"
+else
+  if v1!=v2 && (x2-x1) % (v2-v1) == 0
+    return "YES"
+  else
+    return "NO"
+  end
+end
+
+# Review this one, pretty difficult
+
