@@ -3,7 +3,7 @@
 
 let words = ["do", "or", "do", "not"]
 let wordCounter = {}
-// let i = 0
+let i = 0
 while (i < words.length) {
   let word = words[i]
   if (wordCounter[word] === undefined) {
@@ -38,4 +38,20 @@ console.log(flattenedArray)
 
 // Given a hash, create a new hash that has the keys and values switched.
 // For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
+
+object = {"a": 1, "b": 2, "c": 3}
+new_object = {}
+
+// for (const [letter, number] of Object.entries(object)) {
+//   new_object[number] = letter
+// }
+
+// console.log(new_object)
+
+for (const key in object) {
+  new_object[object[key]] = key
+}
+
+console.log(new_object)
+
 
