@@ -190,15 +190,53 @@ end
 
 # if both x1 and v1 are less than x2/v2, return NO (1st roo will never catch up)
 # MEDIUM method
-if x1 < x2 && v1 < v2
-  return "NO"
-else
-  if v1!=v2 && (x2-x1) % (v2-v1) == 0
-    return "YES"
-  else
-    return "NO"
-  end
-end
+
+# if x1 < x2 && v1 < v2
+#   return "NO"
+# else
+#   if v1!=v2 && (x2-x1) % (v2-v1) == 0
+#     return "YES"
+#   else
+#     return "NO"
+#   end
+# end
 
 # Review this one, pretty difficult
+
+##################################################
+
+# Compare the Triplets
+
+# 1. 2 challenges
+# 2. points awarded 1...100
+# 3. 3 categories: problem clarity, originality, difficulty (a = (a[0], a[1], a[2]) for Alice, b for Bob)
+# 4. 
+  # If a[i] > b[i], then Alice is awarded 1 point.
+  # If a[i] < b[i], then Bob is awarded 1 point.
+  # If a[i] = b[i], then neither person receives a point.
+# Calc comparison points, return as two ints (Alice score, Bob score)
+
+a = [5, 6, 7]
+b = [3, 6, 10]
+
+def triplets(a, b)
+  alice = 0
+  bob = 0
+  points = []
+
+  i = 0
+  while i < a.length
+    if a[i] > b[i]
+      alice += 1
+    elsif a[i] == b[i]
+    else
+      bob += 1
+    end
+    i += 1
+  end
+  pp points = [alice, bob]
+end
+
+triplets([5, 6, 7], [3, 6, 10])
+
 
