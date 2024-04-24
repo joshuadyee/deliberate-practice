@@ -240,3 +240,32 @@ end
 triplets([5, 6, 7], [3, 6, 10])
 
 
+##################################################
+
+# Between Two Sets
+
+# find integers that are multiples of the first array and factors of the second
+# return the number of ints 
+
+# Test Case 1
+a = [2, 6]
+b = [24, 36]
+multiple;
+# define a multiple
+# if a number mod a[i] == 0, its a multiple
+
+for num in a 
+  if multiple % num == 0
+
+  end
+end
+
+# should return 2 (6 and 12 fit the criteria)
+
+def get_total(a, b)
+  p a,b
+end
+
+get_total(a, b)
+
+# Test Case 2
