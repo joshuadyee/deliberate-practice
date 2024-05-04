@@ -42,3 +42,19 @@ function chunkArrayInGroups(arr, size) {
 
 console.log(chunkArrayInGroups([1,2,3,4,5,6], 2))
 
+
+// Leetcode Two Sum
+
+let twoSum = function(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    if(nums.indexOf(target - nums[i]) !== -1 && nums.indexOf(target - nums[i]) !== i) {
+      return [i, nums.indexOf(target - nums[i])]
+    }
+  }
+}
+
+console.log(twoSum([2,7,11,15], 22)) // [1,3]
+
+
+// LC Add Two Numbers
+
