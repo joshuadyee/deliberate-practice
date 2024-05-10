@@ -145,3 +145,22 @@ function chunkArrayInGroups(arr, size) {
   return subArrays
 }
 
+
+// FFC Sum All Numbers in a Range
+
+function sumAll(arr) {
+  // given arr (with 2 nums)
+  // return the sum of the numbers between those 2 nums (inclusive)
+    // sort arr to ensure which way we're incrementing
+  arr.sort((a,b) => a - b)
+    // find the nums from arr[0] to arr[1]
+  let nums = []
+  for (let i = arr[0]; i <= arr[1]; i++) {
+    nums.push(i)
+  }
+  // console.log(nums)
+  return nums.reduce((sum, a) => sum + a)
+}
+
+console.log(sumAll([1, 4]))
+
