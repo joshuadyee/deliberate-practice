@@ -97,3 +97,46 @@ function diffArray(arr1, arr2) {
 }
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
+
+
+// Hackerrank Birthday Cake Candles
+
+function birthdayCakeCandles(candles) {
+  // find the largest value in the arr (candles)
+  // count how many times it appears 
+  // return count
+  let count = 0
+  
+  candles.sort((a, b) => b - a)
+  // console.log(candles)
+  for (let i = 0; i < candles.length; i++) {
+    if (candles[i] === candles[0]) {
+      count++
+    }
+  }
+  return count
+}
+
+console.log(birthdayCakeCandles([3, 2, 1, 3]))
+
+// or
+
+function birthdayCakeCandles(candles) {
+  let max = Math.max(...candles)
+  return candles.filter(candle => candle === max).length
+}
+
+console.log(birthdayCakeCandles([3, 2, 1, 3]))
+
+// or
+
+function birthdayCakeCandles(candles) {
+  let max = Math.max(...candles)
+  let count = 0
+  for (let i = 0; i < candles.length; i++) {
+    if (candles[i] === max) {
+      count++
+    }
+  }
+  return count
+}
