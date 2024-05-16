@@ -37,3 +37,23 @@ function divisibleSumPairs(n, k, ar) {
   return pairs.length
 }
 console.log(divisibleSumPairs(6, 3, [1,3,2,6,1,2]))
+
+
+// FFC Mini Max Sum
+
+function miniMaxSum(arr) {
+  // given arr of 5 nums
+  // find min sum of 4, find max sum of 4
+  // return [min, max]
+
+  arr.sort((a,b) => a - b)
+  let minArr = arr.slice(0, arr.length - 1)
+  let maxArr = arr.slice(1)
+  const sum = (sum, num) => sum + num
+  const min = minArr.reduce(sum, 0)
+  const max = maxArr.reduce(sum, 0)
+  let result = `${min} ${max}`
+  console.log(result) // HR wanted it printed, not returned
+}
+
+console.log(miniMaxSum([1,2,3,4,5]))
