@@ -19,14 +19,3 @@ function sumAll(arr) {
 console.log(sumAll([10, 5]))
 
 
-// FFC Diff Two Arrays
-
-function diffArray(arr1, arr2) {
-  // passed 2 arrs
-  // compare both arrs
-  // return new arr with elems found in only one of the two given arrs
-  // (find the symmetric difference)
-
-  const newArr = []
-  
-}
