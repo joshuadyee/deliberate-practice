@@ -44,6 +44,20 @@ function mutation(arr) {
 
 mutation(["hello", "hey"]);
 
+// or
+
+function mutation(arr) {
+  let down = arr.map(word => word.toLowerCase())
+  for (let i = 0; i < down[1].length; i++) {
+    if (!down[0].includes(down[1][i])) {
+      return false
+    }
+  }
+  return true
+}
+
+mutation(["hello", "hey"]);
+
 // Chunky Monkey
 
 function chunkArrayInGroups(arr, size) {
