@@ -25,3 +25,27 @@ function sockMerchant(n, ar) {
 
 
 console.log(sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])) // return 3
+
+
+// optimized solution
+
+function sockMerchant(n, ar) {
+  let socks = {}
+  let pairs = 0
+  for (let i = 0; i < n; i++) {
+    let sock = ar[i]
+    if (socks[sock] === undefined) {
+      socks[sock] = 0
+    }
+    socks[sock]++
+    console.log(socks)
+    if (socks[sock] % 2 === 0) {  
+      pairs++ 
+    }
+  }
+  return pairs
+}
+
+console.log(sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])) // return 3
+
+// This solution counts the number of pairs of socks in real time as the socks are added to the freq map. 
